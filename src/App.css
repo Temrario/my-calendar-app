@@ -1,0 +1,164 @@
+/* Загальні стилі */
+.App {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* Стилі для календаря */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  max-width: 600px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 300px; /* Фіксована висота */
+  overflow-y: auto; /* Якщо днів занадто багато, додається скрол */
+}
+
+/* Стилі для кнопок днів */
+.calendar button {
+  padding: 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.calendar button:hover {
+  background-color: #ffeb3b;
+  transform: scale(1.1);
+}
+
+.calendar button:focus {
+  outline: none;
+  background-color: #ffeb3b;
+  border-color: #ffeb3b;
+}
+
+.calendar button:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+/* Кнопки для навігації між місяцями */
+.month-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.month-navigation button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.month-navigation button:hover {
+  background-color: #ffeb3b;
+  transform: scale(1.2);
+}
+
+/* Підсвічування днів з подіями */
+.calendar .event-day {
+  background-color: #5B8E6F; /* Підсвічування дня з подією */
+  color: white;
+}
+
+.calendar .event-day:hover {
+  background-color: #4d745a; /* Трохи темніший колір при наведенні */
+}
+
+/* Відображення назв днів тижня */
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.weekday {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+}
+
+/* Стилі для форми події */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Список подій */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 1.1rem;
+}
